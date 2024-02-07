@@ -26,6 +26,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
+
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [["line"], ["allure-playwright", 
 {
@@ -50,7 +51,8 @@ export default defineConfig({
     video: {
       mode: 'retain-on-failure',
       size: { width: 640, height: 480 },
-    }
+    },
+    headless: process.env.CI ? true : false,
   },
 
   /* Configure projects for major browsers */
@@ -60,7 +62,7 @@ export default defineConfig({
       name: 'setup',
       testMatch: /.*\.setup\.ts/,
       use: {
-        headless: false
+        headless: process.env.CI ? true : false,
       }
     },
     {
