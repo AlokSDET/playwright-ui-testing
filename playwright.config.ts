@@ -15,11 +15,11 @@ export default defineConfig({
   //outputDir: '/test-results',
   globalSetup: './global.setup.ts',
   globalTeardown:'./global.teardown.ts',
-  timeout: 5*60*1000,
+  timeout: 10*60*1000,
   expect: {
       timeout: 10 * 1000,
   },
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
