@@ -14,12 +14,12 @@
     "@playwright/test": "^1.41.2",
     "@types/node": "^20.11.15",
     "allure-commandline": "^2.27.0",
-    "allure-playwright": "^2.12.0",
-    "cross-env": "^7.0.3"
+    "allure-playwright": "^2.12.0"
   },
   "dependencies": {
     "dotenv": "^16.4.1",
     "playwright": "^1.41.1",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "cross-env": "^7.0.3"
   }
 }
