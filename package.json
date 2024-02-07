@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "dotenv": "^16.4.1",
-    "nvm-win": "^0.2.4",
     "playwright": "^1.41.1",
     "zod": "^3.22.4"
   }
