@@ -12,7 +12,7 @@ import * as os from "os";
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  outputDir: '/test-results',
+  //outputDir: '/test-results',
   globalSetup: './global.setup.ts',
   globalTeardown:'./global.teardown.ts',
   timeout: 5*60*1000,
