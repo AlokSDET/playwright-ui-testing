@@ -14,7 +14,7 @@ export default class LoginPage {
         this.HEADER_BTN_SIGN_IN = this.page.locator('//a[@aria-label="Sign in"]');
         this.BUISNESS_EMAIL = this.page.locator('//input[@name="user[login]"]');
         this.PASSWORD = this.page.locator('//input[@name="user[password]"]')
-        this.BTN_SIGN_IN = this.page.locator("#user_submit");
+        this.BTN_SIGN_IN = this.page.locator('id=user_submit');
         this.DASHBOARD = this.page.getByTitle('dashboard');
     }
 
