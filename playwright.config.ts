@@ -14,12 +14,12 @@ export default defineConfig({
   /* Run tests in files in parallel */
   //outputDir: '/test-results',
   globalSetup: './global.setup.ts',
-  globalTeardown:'./global.teardown.ts',
-  timeout: 10*60*1000,
+  //globalTeardown:'./global.teardown.ts',
+  timeout: 2*60*1000,
   expect: {
       timeout: 10 * 1000,
   },
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -63,7 +63,12 @@ export default defineConfig({
       testMatch: /.*\.setup\.ts/,
       use: {
         headless: process.env.CI ? true : false,
-      }
+      },
+      teardown: 'teardown'
+    },
+    {
+      name: 'teardown',
+      testMatch: /.*\.teardown\.ts/,
     },
     {
       name: 'chromium',

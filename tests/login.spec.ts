@@ -40,7 +40,7 @@ test.describe('Browser Stack login @login', () => {
   test('verify browserstack login', async ({ loginPage, page }) => {
     await loginPage.loginBrowserStack(ENV.BASE_URL!, ENV.USER_NAME!, ENV.PASS_WORD!);
     await page.waitForURL('**/dashboard**');
-    //expect( await loginPage.isDashboardVisible()).toBe(true);
+    expect( await loginPage.isDashboardVisible()).toBe(true);
     await expect(page).toHaveTitle('Dashboard');
   });
 
