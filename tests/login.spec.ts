@@ -27,6 +27,7 @@ test.describe('Browser Stack login @login', () => {
     await page.goto(ENV.BASE_URL!);
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle('Most Reliable App & Cross Browser Testing Platform | BrowserStack');
+    console.log('login successfull');
   });
 
 

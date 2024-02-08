@@ -25,7 +25,7 @@ setup('authenticate', async ({ browser }) => {
 
     let rawdata = fs.readFileSync(authFile);
 let content = JSON.parse(rawdata);
-console.log(content);
+//console.log(content);
 
 
 

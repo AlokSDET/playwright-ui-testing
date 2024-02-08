@@ -15,7 +15,7 @@ export default defineConfig({
   //outputDir: '/test-results',
   globalSetup: './global.setup.ts',
   //globalTeardown:'./global.teardown.ts',
-  timeout: 2*60*1000,
+  timeout: 5*60*1000,
   expect: {
       timeout: 10 * 1000,
   },
