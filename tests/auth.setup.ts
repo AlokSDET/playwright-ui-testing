@@ -15,4 +15,5 @@ setup('authenticate', async ({ browser }) => {
     await expect(page).toHaveTitle('Dashboard');
     // End of authentication steps.
     await page.context().storageState({ path: authFile });
+    console.log(JSON.stringify(authFile));
 });
