@@ -9,10 +9,13 @@ test.describe('Dashboard Test cases @smoke', () => {
     await page.goto('https://live.browserstack.com/dashboard');
 
     await expect(page).toHaveTitle('Dashboard');
-    console.log('dashboard file- launched dashboard page');
+    console.log('dashboard file- launched dashboard page1');
   });
   
   test('Launch Firefox latest version and verify if getting popup after plan expire', async ({ dashboardPage, page }) => {
+    
+    await expect(page).toHaveTitle('Dashboard');
+    console.log('dashboard file- launched dashboard page2');
     //await dashboardPage.setupPopUp();
     //await dashboardPage.clickOnLatestFirefoxVersion();
     //await expect(page.getByText('No Thanks')).toBeVisible();
