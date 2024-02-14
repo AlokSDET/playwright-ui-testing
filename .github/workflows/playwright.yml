@@ -14,13 +14,13 @@ jobs:
       with:
         node-version: 18
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: install cross-env
       run: npm install --global cross-env
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: cross-env test_env=test npx playwright test --grep @smoke
+      run: cross-env test_env=test npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
       with:
