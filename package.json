@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:test": "cross-env test_env=test npx playwright test --grep @smoke",
-    "test:dev": "cross-env test_env=dev npx playwright test",
+    "test:test": "set test_env=test&& npx playwright test --grep @smoke",
+    "test:dev": "set test_env=dev&& npx playwright test",
     "generate-open-allure": "npx allure generate ./allure-results --clean && npx allure open ./allure-report"
   },
   "author": "",
@@ -17,9 +17,8 @@
     "allure-playwright": "^2.12.0"
   },
   "dependencies": {
-    "dotenv": "^16.4.1",
+    "dotenv": "^16.4.4",
     "playwright": "^1.41.1",
-    "zod": "^3.22.4",
-    "cross-env": "^7.0.3"
+    "zod": "^3.22.4"
   }
 }

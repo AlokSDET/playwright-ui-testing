@@ -9,6 +9,11 @@ async function globalSetup(config: FullConfig) {
                 path: `.env.${process.env.test_env}`,
                 override: true
             });
+        }else{
+            dotenv.config({
+                path: `.env.dev`,
+                override: true
+            });
         }
     } catch (error) {
         console.error("Error loading environment variables:", error);

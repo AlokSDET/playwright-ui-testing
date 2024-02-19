@@ -28,7 +28,7 @@ export default class LoginPage {
         await this.page.waitForURL('**/dashboard**');
     }
 
-    async isDashboardVisible(): Promise<boolean> {
+    public async isDashboardVisible(): Promise<boolean> {
        return  await this.DASHBOARD.isVisible();
     }
 

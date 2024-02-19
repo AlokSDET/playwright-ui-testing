@@ -1,5 +1,5 @@
 
-var fs = require('fs');
+import fs from "fs";
 async function globalTearDown() {
     try {
         var filePath = './playwright/.auth/user.json'; 
